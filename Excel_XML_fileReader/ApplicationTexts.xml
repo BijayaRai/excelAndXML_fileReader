@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LOCALIZATION version="1.0" id="en" name="English">
+
+  <!-- The texts below should be localized for each language in the study -->
+  <TEXT id="month_names_short">---;Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec</TEXT>
+  <TEXT id="month_names_full">---;January;February;March;April;May;June;July;August;September;October;November;December</TEXT>
+  <TEXT id="weekdays_shortest">--;Su;Mo;Tu;We;Th;Fr;Sa</TEXT>
+  <TEXT id="weekdays_short">---;Sun;Mon;Tue;Wed;Thu;Fri;Sat</TEXT>
+  <TEXT id="weekdays_full">---;Sunday;Monday;Tuesday;Wednesday;Thursday;Friday;Saturday</TEXT>
+  <TEXT id="am_pm">AM;PM</TEXT>
+  <TEXT id="unload_warning_title">Unsaved answers</TEXT>
+  <TEXT id="unload_warning_text">Your answers to the questionnaire haven't been saved.</TEXT>
+  <TEXT id="unload_warning_button_text">OK</TEXT>
+  <TEXT id="unload_confirm_title">Unsaved answers</TEXT>
+  <TEXT id="unload_confirm_text">Your answers to the questionnaire haven't been saved.</TEXT>
+  <TEXT id="unload_confirm_yes">Yes</TEXT>
+  <TEXT id="unload_confirm_no">No</TEXT>
+  <TEXT id="today">Today</TEXT>
+  <TEXT id="prev_next">Previous;Next</TEXT>
+  <TEXT id="unload_confirm_no">No</TEXT>
+  <TEXT id="OK_button_text">OK</TEXT>
+  
+  <TEXT id="multiple_windows_title">Multiple windows/tabs</TEXT>
+  <TEXT id="multiple_windows_text">You have multiple windows or tabs open while editing questionnaires. Your changes were not saved. Please close this window or tab and use the other one.</TEXT>
+  
+  <TEXT id="internal_error_title">Internal error</TEXT>
+  <TEXT id="internal_error_text">Internal error occurred. Please try again after a moment.</TEXT>
+  
+  <TEXT id="internal_error_text_ajax">Internal server error occurred. Please refresh the browser page after a moment.</TEXT>
+  
+  <TEXT id="form_instance_saved_title">Questionnaire already saved or discarded.</TEXT>
+  <TEXT id="form_instance_saved_text">This questionnaire has already been saved or discarded in another window or tab. Your changes were not saved. Please close this window or tab and use the other one.</TEXT>
+
+  <TEXT id="crf_failed_patient_disabled_title">Patient is disabled.</TEXT>
+  <TEXT id="crf_failed_patient_disabled_text">The patient has been disabled. Your changes were not saved.</TEXT>
+
+  <TEXT id="redirect_error_title">Multiple windows/tabs</TEXT>
+  <TEXT id="redirect_error_text">You have multiple windows or tabs open while editing questionnaires. Please close this window or tab and use the other one.</TEXT>
+    
+  <TEXT id="password_too_long_title">Password too long</TEXT>
+  <TEXT id="password_too_long_text">Maximum password length is 50 characters.</TEXT>
+  
+  <TEXT id="password_too_short_title">Password too short</TEXT>
+  <TEXT id="password_too_short_text">Minimum password length is 8 characters.</TEXT>
+  
+  <TEXT id="password_unsafe_upper_case_char_needed_title">Upper case character missing from password</TEXT>
+  <TEXT id="password_unsafe_upper_case_char_needed_text">Password must contain at least one upper case character.</TEXT>
+  
+  <TEXT id="password_unsafe_lower_case_char_needed_title">Lower case character missing from password</TEXT>
+  <TEXT id="password_unsafe_lower_case_char_needed_text">Password must contain at least one lower case character.</TEXT>
+  
+  <TEXT id="password_unsafe_digits_needed_title">No digits in password</TEXT>
+  <TEXT id="password_unsafe_digits_needed_text">Password must contain at least one digit.</TEXT>
+  
+  <TEXT id="password_unsafe_special_char_needed_title">No special characters in password</TEXT>
+  <TEXT id="password_unsafe_special_char_needed_text">Password must contain at least one special character.</TEXT>
+  
+  <TEXT id="password_unsafe_used_earlier_title">Password used earlier</TEXT>
+  <TEXT id="password_unsafe_used_earlier_text">Password has been used earlier.</TEXT>
+  
+  <TEXT id="login_name_in_use_title">Login name in use</TEXT>
+  <TEXT id="login_name_in_use_text">Login name is already in use.</TEXT>
+  
+  <TEXT id="login_name_not_specified_title">Login name not specified</TEXT>
+  <TEXT id="login_name_not_specified_text">No login name was specified.</TEXT>
+  
+  <TEXT id="login_name_too_long_title">Login name too long</TEXT>
+  <TEXT id="login_name_too_long_text">Login name is is too long. Maximum length is 50 characters.</TEXT>
+  
+  <TEXT id="login_name_too_short_title">Login name too short</TEXT>
+  <TEXT id="login_name_too_short_text">Login name is is too short. Minimum length is 2 characters.</TEXT>
+  
+  <TEXT id="login_name_password_identical_title">Same login name and password</TEXT>
+  <TEXT id="login_name_password_identical_text">Login name and password cannot have the same value.</TEXT>
+  
+  <TEXT id="user_data_conflict_title">Data conflict</TEXT>
+  <TEXT id="user_data_conflict_text">You have been logged out due to a data conflict (someone else has modified data on the server). To avoid any conflicts, the data you entered was not saved. Please log in again and re-enter your data.</TEXT>
+  
+  <TEXT id="site_data_conflict_title">Site data conflict</TEXT>
+  <TEXT id="site_data_conflict_text">You have been logged out due to a data conflict (someone else has modified the site properties). To avoid any conflicts, the data you entered was not saved. Please log in again and re-enter your data.</TEXT>
+  
+  <TEXT id="cache_conflict_title">Problem storing data</TEXT>
+  <TEXT id="cache_conflict_text">You have been logged out and the data you entered was not saved (due to a cache conflict, invalid data or missing access rights).</TEXT>
+  
+  <!-- -->
+  
+  <!-- The low level error texts -->
+  
+  <TEXT id="missing_protocol_title">No protocol</TEXT>
+  <TEXT id="missing_protocol_text">Study protocol release not available to this user. Please contact Helpdesk.</TEXT>
+  <TEXT id="missing_configuration_title">No configuration</TEXT>
+  <TEXT id="missing_configuration_text">Settings or Regions release not available to this user. Please contact Helpdesk.</TEXT>
+  
+  <TEXT id="variable_no_access_title">No access to variable</TEXT>
+  <TEXT id="variable_no_access_text">Cannot access protocol variable.</TEXT>
+  
+  <TEXT id="role_not_defined_title">Role not defined</TEXT>
+  <TEXT id="role_not_defined_text">Role has no definition.</TEXT>
+  
+  <TEXT id="user_not_loaded_title">User not loaded</TEXT>
+  <TEXT id="user_not_loaded_text">User information could not be loaded.</TEXT>
+  
+  <TEXT id="user_not_logged_title">No current user</TEXT>
+  <TEXT id="user_not_logged_text">There is no current user</TEXT>
+  
+  <TEXT id="user_not_saved_title">User not saved</TEXT>
+  <TEXT id="user_not_saved_text">User information could not be saved.</TEXT>
+  
+  <TEXT id="user_not_created_title">User not created</TEXT>
+  <TEXT id="user_not_created_text">User could not be created.</TEXT>
+  
+  <TEXT id="user_not_enabled_title">User not enabled</TEXT>
+  <TEXT id="user_not_enabled_text">User could not be enabled.</TEXT>
+  
+  <TEXT id="user_not_disabled_title">User not disabled</TEXT>
+  <TEXT id="user_not_disabled_text">User could not be disabled.</TEXT>
+  
+  <TEXT id="user_not_removed_title">User not removed</TEXT>
+  <TEXT id="user_not_removed_text">User could not be removed.</TEXT>
+  
+  <TEXT id="proxy_attach_failed_title">Attaching proxy failed</TEXT>
+  <TEXT id="proxy_attach_failed_text">Creating proxy/patient relationship failed.</TEXT>
+  
+  <TEXT id="proxy_detach_failed_title">Detaching proxy failed</TEXT>
+  <TEXT id="proxy_detach_failed_text">Removing proxy/patient relationship failed.</TEXT>
+  
+  <TEXT id="crf_failed_loading_crf_title">Questionnaire instance not loaded</TEXT>
+  <TEXT id="crf_failed_loading_crf_text">Could not load questionnaire instance.</TEXT>
+  
+  <TEXT id="crf_failed_creating_crf_title">Questionnaire instance not created</TEXT>
+  <TEXT id="crf_failed_creating_crf_text">Could not create questionnaire instance.</TEXT>
+  
+  <TEXT id="crf_failed_setting_data_items_title">Setting data item value failed</TEXT>
+  <TEXT id="crf_failed_setting_data_items_text">Could not set value for a data item.</TEXT>
+
+  <TEXT id="crf_failed_committing_crf_title">Questionnaire instance not committed</TEXT>
+  <TEXT id="crf_failed_committing_crf_text">Could not commit questionnaire instance.</TEXT>
+
+  <TEXT id="variables_not_sent_title">Variables not committed</TEXT>
+  <TEXT id="variables_not_sent_text">Could not commit patient variables.</TEXT>
+
+  <TEXT id="variable_value_not_set_title">Setting variable value failed</TEXT>
+  <TEXT id="variable_value_not_set_text">Could not set value for a variable {0}.</TEXT>
+  
+  <TEXT id="variable_scope_not_supported_title">Unsupported variable scope</TEXT>
+  <TEXT id="variable_scope_not_supported_text">Study and device variable scopes are not supported.</TEXT>
+
+  <TEXT id="instant_notification_not_sent_title">Sending instant notification failed</TEXT>
+  <TEXT id="instant_notification_not_sent_text">Could not send instant notification.</TEXT>
+
+  <TEXT id="wrong_form_type_title">Wrong form type</TEXT>
+  <TEXT id="wrong_form_type_text">Current form type is not valid for the requested operation.</TEXT>
+
+  <TEXT id="protocol_error_title">Protocol error</TEXT>
+  <TEXT id="protocol_error_text">Study protocol contained invalid operation.</TEXT>
+  
+  <TEXT id="role_too_limited_title">Too limited role</TEXT>
+  <TEXT id="role_too_limited_text">User's role does not permit the requested operation.</TEXT>
+
+  <TEXT id="form_not_found_id_title">Form not found</TEXT>
+  <TEXT id="form_not_found_id_text">Protocol form not found by ID.</TEXT>
+  
+  <TEXT id="form_not_found_name_title">Form not found</TEXT>
+  <TEXT id="form_not_found_name_text">Protocol form not found by name.</TEXT>
+  
+  <TEXT id="form_not_found_type_title">Form not found</TEXT>
+  <TEXT id="form_not_found_type_text">Protocol form not found by type.</TEXT>
+  
+  <TEXT id="no_current_form_title">Form not available</TEXT>
+  <TEXT id="no_current_form_text">Protocol form not found.</TEXT>
+  
+  <TEXT id="missing_accessrights_title">Insufficient access rights</TEXT>
+  <TEXT id="missing_accessrights_text">The operation could not be performed because of missing access rights.</TEXT>
+  
+  <TEXT id="trialuser_locked_title">User locked</TEXT>
+  <TEXT id="trialuser_locked_text">User account has been locked.</TEXT>
+
+  <TEXT id="site_not_loaded_title">Site not loaded</TEXT>
+  <TEXT id="site_not_loaded_text">Site information could not be loaded for site {0}. The site does not exist or you don't have access to that site.</TEXT>
+  
+  <TEXT id="site_not_loaded2_title">Site not loaded</TEXT>
+  <TEXT id="site_not_loaded2_text">Site information could not be loaded.</TEXT>
+  
+  <TEXT id="default_site_not_loaded_title">Default site not loaded</TEXT>
+  <TEXT id="default_site_not_loaded_text">Site information for the default site could not be loaded.</TEXT>
+  
+  <TEXT id="site_not_mapped_title">Site does not exist</TEXT>
+  <TEXT id="site_not_mapped_text">Site does not exist for the specified site code.</TEXT>
+  
+  <TEXT id="listing_sites_failed_title">Listing sites failed</TEXT>
+  <TEXT id="listing_sites_failed_text">Sites could not be listed.</TEXT>
+  
+  <TEXT id="no_target_site_title">No target site</TEXT>
+  <TEXT id="no_target_site_text">Target site has not been selected before accessing site variables.</TEXT>
+  
+  <TEXT id="data_form_no_patient_title">Data questionnaire, but no patient</TEXT>
+  <TEXT id="data_form_no_patient_text">Data questionnaire cannot be opened when there's no patient selected.</TEXT>
+  
+  <TEXT id="too_many_forms_per_request_title">Too many forms per request</TEXT>
+  <TEXT id="too_many_forms_per_request_text">Study protocol opened too many forms per single request. Maximum is {0}.</TEXT>
+  
+  <TEXT id="too_many_pages_per_request_title">Too many pages per request</TEXT>
+  <TEXT id="too_many_pages_per_request_text">Study protocol opened too many form pages per single request. Maximum is {0}.</TEXT>
+  
+  <TEXT id="too_many_looprounds_title">Too many loop rounds</TEXT>
+  <TEXT id="too_many_looprounds_text">Loop command in study protocol was terminated prematurely. Maximum number of rounds for WHILE and FOR loops is {0}.</TEXT>
+  
+  <TEXT id="too_many_loop_rounds_per_request_title">Too many loop rounds</TEXT>
+  <TEXT id="too_many_loop_rounds_per_request_text">Loop command in study protocol was terminated prematurely. Maximum number of rounds per single request is {0}.</TEXT>
+  
+  <TEXT id="too_many_messages_per_request_title">Too many messages per request</TEXT>
+  <TEXT id="too_many_messages_per_request_text">Study protocol generated too many messages/notifications/sounds per single request. The total sum exceeds {0}.</TEXT>
+
+  <TEXT id="too_long_request_duration_title">Too long request duration</TEXT>
+  <TEXT id="too_long_request_duration_text">Handling the request took too long time. Maximum is {0} seconds.</TEXT>
+  
+  <TEXT id="too_deep_nesting_title">Too deep nesting</TEXT>
+  <TEXT id="too_deep_nesting_text">Study protocol generated too deep command execution stack. Maximum depth is {0}.</TEXT>
+
+  <TEXT id="protocol_parsing_error_title">Protocol parsing error</TEXT>
+  <TEXT id="protocol_parsing_error_text">An error occurred while parsing the protocol.</TEXT>
+  
+  <TEXT id="patient_var_used_for_non_patient_title">Patient variable accessed for non-patient target user</TEXT>
+  <TEXT id="patient_var_used_for_non_patient_text">Patient variables cannot be used for target users that are not patients.</TEXT>
+
+  <TEXT id="no_exit_events_title">Exit events not available</TEXT>
+  <TEXT id="no_exit_events_text">{0} event is not available for web protocols. Protocol code in event handler was not executed.</TEXT>
+
+</LOCALIZATION>
