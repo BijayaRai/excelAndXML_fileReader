@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -30,19 +31,20 @@ public class ExcelDataReader {
 		
 		dataFromExcel= new LinkedHashMap<String,String>();
 		fileReader(temp);
-		return dataFromExcel;
 		
-		/*
-		 * testing if the LinkedHaspMap is populated with KV pair
+		
+		
+		/* // testing if the LinkedHaspMap is populated with KV pair
 		Iterator tempIt= dataFromExcel.entrySet().iterator();
 		    while (tempIt.hasNext()) {
 		    	//assign each pair to 
 		        Map.Entry pair = (Map.Entry)tempIt.next();
-		        System.out.println(pair.getKey() + " = " + pair.getValue());
+		     //   System.out.println(pair.getKey() + " = " + pair.getValue());
 		        tempIt.remove();
 		    }
 		*/
 		
+		    return dataFromExcel;
 
 	}
 
@@ -114,7 +116,7 @@ public class ExcelDataReader {
                   //  System.out.print("NULL value");
                 }
             }
-            dataFromExcel.put(list.get(0).toString(),list.get(1).toString());
+            dataFromExcel.put(list.get(0).toString().trim(),list.get(1).toString());
         }
 	
     }

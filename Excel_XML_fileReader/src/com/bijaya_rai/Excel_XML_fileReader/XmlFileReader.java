@@ -3,7 +3,9 @@ package com.bijaya_rai.Excel_XML_fileReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
+import java.util.Map;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -20,11 +22,13 @@ import org.xml.sax.SAXException;
  */
 public class XmlFileReader {
 	private LinkedHashMap<String, String> dataFromXML = null;
+	
 	DocumentBuilderFactory dbf;
 	DocumentBuilder builder;
 	Document doc;
+
 	protected LinkedHashMap<String, String> functionHandler(String fileName) {
-		dataFromXML=new LinkedHashMap<>();
+		dataFromXML = new LinkedHashMap<>();
 		dbf = DocumentBuilderFactory.newInstance();
 		try {
 			builder = dbf.newDocumentBuilder();
@@ -33,44 +37,49 @@ public class XmlFileReader {
 			e.printStackTrace();
 		}
 		fileReader(fileName);
-		
-		
+
+		// int i=0;
+		// testing if the LinkedHaspMap is populated with KV pair
 		/*
-		 //testing if the LinkedHaspMap is populated with KV pair
-		Iterator tempIt= dataFromXML.entrySet().iterator();
-		    while (tempIt.hasNext()) {
-		    	//access each KV pair from hashmap
-		        Map.Entry pair = (Map.Entry)tempIt.next();
-		        System.out.println(pair.getKey() + " = " + pair.getValue());
-		        tempIt.remove();
-		    }
-		*/
+		 * Iterator tempIt= dataFromXML.entrySet().iterator(); while
+		 * (tempIt.hasNext()) { //access each KV pair from hashmap Map.Entry
+		 * pair = (Map.Entry)tempIt.next(); System.out.println(pair.getKey() +
+		 * " = " + pair.getValue()); tempIt.remove();
+		 * 
+		 * i++;}
+		 * 
+		 * System.out.println("XML"+i);
+		 */
 		return dataFromXML;
 	}
 
 	private void fileReader(String fileName) {
+		 LinkedHashMap<String, String> pureDataFromXML = new LinkedHashMap<>();
 		try {
 			File fis = new File(fileName);
 
-		
 			doc = builder.parse(fis);
-			
-			//get the root element of the xml file
-			Element root= doc.getDocumentElement();
-			
-			NodeList list= doc.getElementsByTagName("TEXT");
+
+			// get the root element of the xml file
+			Element root = doc.getDocumentElement();
+			String tempData = "";
+			NodeList list = doc.getElementsByTagName("TEXT");
 			Element xmlData;
-			for(int i=0;i<list.getLength();i++)
-			{
-				xmlData=(Element) list.item(i);
-				dataFromXML.put(xmlData.getAttribute("id"), xmlData.getTextContent());
-				//System.out.println(xmlData.getAttribute("id")+":"+ xmlData.getTextContent());
+			for (int i = 0; i < list.getLength(); i++) {
+				xmlData = (Element) list.item(i);
+				tempData = "<TEXT id=\"" + xmlData.getAttribute("id") + "\"" + ">";
+				dataFromXML.put(tempData, xmlData.getTextContent());
+				pureDataFromXML.put(xmlData.getAttribute("id"), xmlData.getTextContent());
+				
+				
+				// System.out.println(xmlData.getAttribute("id")+":"+
+				// xmlData.getTextContent());
 			}
-			
-			
-		//	System.out.println(root.getAttribute("id")+ root.getTagName());
-			
-			
+
+			XmlFileWriter xfw = new XmlFileWriter();
+			xfw.writeToTextFile( 1, pureDataFromXML);
+			// System.out.println(root.getAttribute("id")+ root.getTagName());
+
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -84,5 +93,4 @@ public class XmlFileReader {
 
 	}
 
-	
 }
