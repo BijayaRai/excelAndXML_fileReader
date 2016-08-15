@@ -22,7 +22,7 @@ import org.xml.sax.SAXException;
  */
 public class XmlFileReader {
 	private LinkedHashMap<String, String> dataFromXML = null;
-	
+
 	DocumentBuilderFactory dbf;
 	DocumentBuilder builder;
 	Document doc;
@@ -54,7 +54,6 @@ public class XmlFileReader {
 	}
 
 	private void fileReader(String fileName) {
-		 LinkedHashMap<String, String> pureDataFromXML = new LinkedHashMap<>();
 		try {
 			File fis = new File(fileName);
 
@@ -69,16 +68,10 @@ public class XmlFileReader {
 				xmlData = (Element) list.item(i);
 				tempData = "<TEXT id=\"" + xmlData.getAttribute("id") + "\"" + ">";
 				dataFromXML.put(tempData, xmlData.getTextContent());
-				pureDataFromXML.put(xmlData.getAttribute("id"), xmlData.getTextContent());
-				
-				
+
 				// System.out.println(xmlData.getAttribute("id")+":"+
 				// xmlData.getTextContent());
 			}
-
-			XmlFileWriter xfw = new XmlFileWriter();
-			xfw.writeToTextFile( 1, pureDataFromXML);
-			// System.out.println(root.getAttribute("id")+ root.getTagName());
 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

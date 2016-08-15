@@ -4,13 +4,11 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -33,30 +31,38 @@ public class XmlFileWriter {
 	DocumentBuilderFactory dbf;
 	DocumentBuilder builder;
 	Document doc;
+	final String location=System.getProperty("user.home")+File.separator+"Desktop";
 	private LinkedHashMap<String, String> afterTranslate;
+	protected LinkedHashMap<String, String> pureDataFromXML;
 	Iterator tempIt;
 	private Map.Entry pair;
-	String fileName="";
+	String fileName = "";
 
 	protected void createXML(LinkedHashMap<String, String> dataFromExcel, LinkedHashMap<String, String> dataFromXml) {
 
 		tempIt = dataFromExcel.entrySet().iterator();
+		// <TEXT id="month_names_short">
 
 		afterTranslate = new LinkedHashMap<>();
-	
+		pureDataFromXML = new LinkedHashMap<>();
+		String s = " ", finalString;
 		while (tempIt.hasNext()) {
 			pair = (Map.Entry) tempIt.next();
 			// System.out.println(pair.getKey());
 
 			if (dataFromXml.containsKey(pair.getKey().toString())) {
-				int pos = new ArrayList<String>(dataFromXml.keySet()).indexOf(pair.getKey());
-				// System.out.println(dataFromXml.keySet(pos).toString());
+				// int pos = new
+				// ArrayList<String>(dataFromXml.keySet()).indexOf(pair.getKey());
+				// System.out.println(pair.getKey().toString());
 				// dataFromExcel.put((String) pair.getKey(),
 				// dataFromXml.get(pair.getKey().toString()));
+				s = pair.getKey().toString();
+
+				finalString = s.substring(s.indexOf("\"") + 1, s.lastIndexOf("\""));
 
 				afterTranslate.put(pair.getKey().toString(), pair.getValue().toString());
-
-				// System.out.println("Key:" + pair.getKey().toString());
+				pureDataFromXML.put(finalString, pair.getValue().toString());
+				// System.out.println(finalString);
 				// Value:"+pair.getValue());
 
 			}
@@ -70,11 +76,12 @@ public class XmlFileWriter {
 		 * " = " + pair.getValue()); i++; tempIt.remove(); }
 		 * System.out.println(i);
 		 */
-		writeToTextFile( 0,afterTranslate);
+		writeToTextFile(1, pureDataFromXML);
+		writeToTextFile(0, afterTranslate);
 		// writeToXMLFile();
 	}
 
-	protected void writeToTextFile( int xmlOrText, LinkedHashMap<String, String> afterTranslateText) {
+	protected void writeToTextFile(int xmlOrText, LinkedHashMap<String, String> afterTranslateText) {
 		/*
 		 * DateFormat df = new SimpleDateFormat("dd/MM/yy"); Date dateobj = new
 		 * Date(); String date = df.format(dateobj).toString();
@@ -82,17 +89,19 @@ public class XmlFileWriter {
 		 * String filenm= new StringBuilder(fileName).append(date).toString();
 		 * System.out.println(filenm);
 		 */
-		fileName="translatedText";
+		System.out.println(location);
+		fileName = "translatedText";
 		try {
 			File translatedTextFile;
 			if (xmlOrText == 0) {
-				translatedTextFile = new File(fileName + ".xml");
+				translatedTextFile = new File(location,fileName + ".xml");
 			} else
-				translatedTextFile = new File(fileName + ".txt");
+				translatedTextFile = new File(location,fileName + ".txt");
 
 			if (!translatedTextFile.exists()) {
 
 				translatedTextFile.createNewFile();
+			
 			}
 
 			FileWriter writer = new FileWriter(translatedTextFile);
@@ -105,16 +114,15 @@ public class XmlFileWriter {
 			if (xmlOrText == 0) {
 				while (tempIt.hasNext()) {
 					pair = (Map.Entry) tempIt.next();
-					textToWrite = pair.getKey().toString() +pair.getValue().toString() + "</TEXT>";
+					textToWrite = pair.getKey().toString() + pair.getValue().toString() + "</TEXT>";
 					bw.write(textToWrite);
 					bw.newLine();
 					tempIt.remove();
 				}
-			} else
-			{
+			} else {
 				while (tempIt.hasNext()) {
 					pair = (Map.Entry) tempIt.next();
-					textToWrite = pair.getKey().toString()+ "=" + pair.getValue().toString();
+					textToWrite = pair.getKey().toString() + "=" + pair.getValue().toString();
 					bw.write(textToWrite);
 					bw.newLine();
 					tempIt.remove();
